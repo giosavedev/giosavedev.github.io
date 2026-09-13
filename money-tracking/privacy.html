@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de privacidad | Money Tracking</title>
+  <meta name="description" content="Aviso de privacidad de Money Tracking, aplicación de registro personal de ingresos y gastos.">
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font: 18px/1.55 Georgia, "Times New Roman", serif; color: #1a1a1a; background: #f6f6f4; }
+    header, main, footer { max-width: 42rem; margin: 0 auto; padding: 1.5rem 1.25rem; }
+    header { padding-top: 2.5rem; }
+    h1 { font-size: 1.85rem; line-height: 1.2; margin: 0 0 .5rem; }
+    h2 { font-size: 1.35rem; margin-top: 2rem; }
+    h3 { font-size: 1.1rem; }
+    .meta, nav, footer { font-family: system-ui, sans-serif; font-size: .95rem; color: #444; }
+    nav a, a { color: #0b57d0; }
+    table { border-collapse: collapse; width: 100%; font-size: .92rem; font-family: system-ui, sans-serif; }
+    th, td { border: 1px solid #ccc; padding: .45rem .55rem; text-align: left; vertical-align: top; }
+    th { background: #eee; }
+    hr { border: 0; border-top: 1px solid #ddd; margin: 2.5rem 0; }
+    .box { background: #fff; border: 1px solid #ddd; padding: 1rem 1.1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="meta">Money Tracking</p>
+    <h1>Política de privacidad</h1>
+    <p class="meta">Última actualización: 12 de septiembre de 2026 · Last updated: 12 September 2026</p>
+    <nav>
+      <a href="#es">Español</a> ·
+      <a href="#en">English</a> ·
+      <a href="#eliminacion-de-cuenta">Eliminar cuenta</a>
+    </nav>
+  </header>
+  <main>
+    <p>Este aviso describe las prácticas <strong>actuales</strong> de <strong>Money Tracking</strong>: un registro personal de ingresos y gastos guardado en el dispositivo, con inicio de sesión mediante Google y Firebase. No describe banca, préstamos, pagos, anuncios ni sincronización en la nube de movimientos, porque la aplicación <strong>no</strong> las ofrece.</p>
+
+    <h2 id="es">Español (aviso integral)</h2>
+    <div class="box">
+      <h3>Aviso simplificado</h3>
+      <p><strong>Responsable:</strong> Giovanni Sanchez, persona física, México.<br>
+      <strong>Contacto:</strong> <a href="mailto:giosave98@gmail.com">giosave98@gmail.com</a></p>
+      <p>Al continuar con Google, se trata tu correo, nombre, foto de perfil e identificadores de cuenta para autenticarte. Los ingresos, gastos, categorías, etiquetas y preferencias que captures se guardan en bases SQLite <strong>en tu teléfono</strong> y no se envían a un servidor nuestro. El aviso integral está en esta misma página.</p>
+    </div>
+
+    <h3>1. Identidad del responsable</h3>
+    <ul>
+      <li><strong>Aplicación:</strong> Money Tracking</li>
+      <li><strong>Responsable:</strong> Giovanni Sanchez</li>
+      <li><strong>País:</strong> México</li>
+      <li><strong>Correo para privacidad, ARCO y eliminación de cuenta:</strong> <a href="mailto:giosave98@gmail.com">giosave98@gmail.com</a></li>
+      <li><strong>Sitio:</strong> <a href="https://giosavedev.github.io/">https://giosavedev.github.io/</a></li>
+    </ul>
+    <p>El nombre del desarrollador en este aviso debe coincidir con el que aparezca en la ficha de Google Play.</p>
+    <p>Money Tracking es una herramienta de <strong>registro y consulta</strong> de movimientos que tú capturas (ingresos y gastos/egresos). <strong>No</strong> es una entidad financiera, no abre cuentas bancarias, no inicia transferencias, no otorga crédito, no vende seguros, no conecta extractos bancarios y <strong>no</strong> constituye asesoría financiera, fiscal ni de inversión.</p>
+
+    <h3>2. Qué datos se tratan</h3>
+    <h4>2.1 Datos de cuenta (salen del dispositivo)</h4>
+    <p>Si inicias sesión con Google, la aplicación y los SDK de Google/Firebase tratan:</p>
+    <table>
+      <thead>
+        <tr><th>Dato</th><th>Origen</th><th>Finalidad</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Correo electrónico</td><td>Google Sign-In / Firebase Authentication</td><td>Identificar la sesión y asociar tus movimientos locales a tu userId</td></tr>
+        <tr><td>Nombre visible</td><td>Google</td><td>Mostrar tu perfil en la app</td></tr>
+        <tr><td>Foto de perfil (URL)</td><td>Google</td><td>Mostrar tu perfil en la app</td></tr>
+        <tr><td>Identificador de usuario (UID de Firebase / ID de Google)</td><td>Google / Firebase</td><td>Vincular la sesión local con la cuenta</td></tr>
+        <tr><td>Token de acceso</td><td>Google Sign-In</td><td>Completar el inicio de sesión; se guarda en SQLite local; no viaja en los respaldos nuevos</td></tr>
+        <tr><td>IP, user-agent, identificadores técnicos de Firebase</td><td>SDK de Firebase Authentication</td><td>Seguridad, prevención de abuso y operación del servicio de autenticación</td></tr>
+      </tbody>
+    </table>
+    <p>Estos datos se transmiten a Google LLC / Firebase. Firebase cifra esos envíos con HTTPS. Tras una solicitud de borrado, elimina la información de autenticación de sistemas activos y de respaldo en un plazo del orden de 180 días. Consulta <a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a> y la <a href="https://policies.google.com/privacy">Política de Privacidad de Google</a>.</p>
+
+    <h4>2.2 Datos financieros que tú capturas (quedan en el dispositivo)</h4>
+    <p>Puedes registrar monto, fecha, tipo (ingreso = income; gasto/egreso = expense), categoría, descripción, etiquetas, método de pago, catálogos, moneda de presentación (no convierte ni guarda un tipo de cambio por movimiento) e idioma de la interfaz (es o en).</p>
+    <p>Esa información se guarda en SQLite local. <strong>No hay sincronización financiera con Firestore ni con otro servidor nuestro.</strong> Google Play considera “recoger” los datos que salen del dispositivo. Los movimientos locales no se declaran como recogidos mientras no salgan del teléfono.</p>
+
+    <h4>2.3 Respaldo local</h4>
+    <p>La app puede generar un JSON en el almacenamiento privado de la aplicación. Los respaldos nuevos incluyen perfil (correo, nombre, foto, último acceso) y catálogos/movimientos; <strong>excluyen tokens y sesiones</strong>. Ese archivo no se sube a nuestros servidores. Si tú lo copias a Drive, correo u otro servicio, rigen los términos de ese proveedor.</p>
+
+    <h4>2.4 Datos que no pedimos</h4>
+    <p>No solicitamos contactos, ubicación, SMS, cámara, micrófono, inventario de apps, número de teléfono, cuentas bancarias, números de tarjeta, CURP, RFC ni identificación oficial.</p>
+
+    <h4>2.5 Limitación actual en el dispositivo</h4>
+    <p>Las categorías y etiquetas personalizadas pueden quedar compartidas entre cuentas que usen el mismo dispositivo. Los movimientos sí se consultan por userId.</p>
+
+    <h3>3. Finalidades</h3>
+    <p>Necesarias para el servicio (sin publicidad): autenticarte; guardar y resumir movimientos; respaldo y restauración locales; idioma y moneda de presentación; atender privacidad, seguridad o eliminación.</p>
+    <p>No usamos tus datos para mercadotecnia, perfilado publicitario, venta a terceros ni decisiones automatizadas con efectos legales. Si en el futuro existiera sincronización en la nube, anuncios o compras, se actualizará este aviso antes de activarlas. Una pantalla de suscripción en compilaciones de desarrollo no implica que esas funciones estén activas.</p>
+
+    <h3>4. Destinatarios</h3>
+    <table>
+      <thead>
+        <tr><th>Destinatario</th><th>Qué recibe</th><th>Por qué</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Google / Firebase Authentication</td><td>Datos de cuenta de la sección 2.1</td><td>Inicio de sesión y cuenta</td></tr>
+        <tr><td>Google Sign-In</td><td>Correo, nombre, foto e identificadores, con tu consentimiento en el flujo de Google</td><td>Identidad</td></tr>
+        <tr><td>Tú mismo</td><td>Archivo JSON de respaldo, si lo generas y lo copias</td><td>Portabilidad voluntaria</td></tr>
+      </tbody>
+    </table>
+    <p>El binario de Android puede incluir el SDK de Cloud Firestore por dependencia. La aplicación no escribe ni lee tus ingresos o gastos en Firestore. Ese SDK puede enviar metadatos técnicos de servicio a Google. No hay SDK de anuncios, analítica de marketing ni Crashlytics en el producto actual. No vendemos datos personales.</p>
+
+    <h3>5. Conservación</h3>
+    <table>
+      <thead>
+        <tr><th>Información</th><th>Conservación</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>SQLite local</td><td>Mientras la app esté instalada o hasta que borres los datos en Ajustes</td></tr>
+        <tr><td>JSON de respaldo en el dispositivo</td><td>Hasta que los elimines tú; el borrado de datos de la app no borra esos archivos</td></tr>
+        <tr><td>Idioma</td><td>Puede permanecer tras borrar catálogos y movimientos</td></tr>
+        <tr><td>Cuenta Firebase Authentication</td><td>Hasta eliminar la cuenta (sección 7). Firebase puede retener copias de seguridad un tiempo adicional (del orden de 180 días)</td></tr>
+        <tr><td>IP y señales de abuso de Firebase</td><td>Según la política de Firebase (en Auth, las IP suelen conservarse unas semanas)</td></tr>
+      </tbody>
+    </table>
+    <p>Desinstalar la aplicación elimina las bases locales de ese dispositivo. No podemos recuperarlas.</p>
+
+    <h3>6. Seguridad</h3>
+    <ul>
+      <li>Los movimientos viven en el almacenamiento privado de Android para la app.</li>
+      <li>El inicio de sesión usa HTTPS hacia Google/Firebase.</li>
+      <li>La base SQLite no tiene cifrado adicional propio. Conviene activar el bloqueo del teléfono.</li>
+      <li>Los respaldos JSON locales no están cifrados de extremo a extremo.</li>
+    </ul>
+
+    <h3 id="eliminacion-de-cuenta">7. Eliminación de cuenta y datos</h3>
+    <p>Google Play exige, para apps que crean cuenta, una vía en la aplicación y una vía web.</p>
+    <p><strong>En la aplicación:</strong></p>
+    <ol>
+      <li><strong>Borrar datos locales:</strong> Ajustes. Vacía tablas locales. No elimina la cuenta en Firebase ni los JSON de respaldo.</li>
+      <li><strong>Cerrar sesión:</strong> cierra Google y Firebase en el dispositivo; no borra el usuario en Firebase.</li>
+      <li><strong>Desinstalar:</strong> borra SQLite en ese teléfono.</li>
+    </ol>
+    <p><strong>Fuera de la aplicación (recurso web):</strong> envía un correo a <a href="mailto:giosave98@gmail.com">giosave98@gmail.com</a> desde la dirección con la que entras a Money Tracking, asunto <code>Eliminar cuenta Money Tracking</code>, pidiendo borrar la cuenta de Firebase Authentication. También borra los datos locales en el teléfono y, si quieres, revoca el acceso en <a href="https://myaccount.google.com/permissions">los permisos de tu cuenta de Google</a>.</p>
+    <p>No congelamos la cuenta como sustituto del borrado. No tenemos obligación de conservar tus movimientos durante 10 años: no somos intermediario financiero ni sujeto AML por el giro de esta app.</p>
+
+    <h3>8. Derechos ARCO (México)</h3>
+    <p>Solicita acceso, rectificación, cancelación u oposición, o limita el uso, en <a href="mailto:giosave98@gmail.com">giosave98@gmail.com</a>. Indica tu nombre, el correo de la cuenta Google usada en la app y la solicitud. Los movimientos locales se editan en la app. Puedes acudir a la autoridad mexicana competente en protección de datos personales.</p>
+
+    <h3>9. Menores</h3>
+    <p>No está dirigida a menores de 13 años ni al programa Families de Google Play. Si un menor usó la app, contáctanos para borrar la cuenta.</p>
+
+    <h3>10. Permisos</h3>
+    <p>La app necesita red para el inicio de sesión. No declara permisos de contactos, ubicación, cámara, micrófono ni almacenamiento amplio innecesario para el registro de gastos.</p>
+
+    <h3>11. Cambios y contacto</h3>
+    <p>La versión vigente se publica en esta URL. Contacto: Giovanni Sanchez, <a href="mailto:giosave98@gmail.com">giosave98@gmail.com</a>.</p>
+
+    <hr>
+    <h2 id="en">English</h2>
+    <div class="box">
+      <h3>Short notice</h3>
+      <p><strong>Controller:</strong> Giovanni Sanchez, individual, Mexico.<br>
+      <strong>Contact:</strong> <a href="mailto:giosave98@gmail.com">giosave98@gmail.com</a></p>
+      <p>If you continue with Google, your email, name, profile photo and account identifiers are processed for sign-in. Income, expenses, categories, tags and preferences you enter are stored in SQLite on your device and are not sent to our server. This page is the full policy.</p>
+    </div>
+    <p>Money Tracking is a personal ledger. It is not a bank, payment service, lender, insurer or investment adviser. It does not connect to bank accounts.</p>
+    <p><strong>Account data (leaves the device):</strong> email, display name, profile photo URL, Firebase/Google user IDs, access token (stored locally; not included in new backups), plus technical data the Firebase Authentication SDK collects (IP address, user agent, Firebase app identifiers) for security. Recipients: Google / Firebase. HTTPS in transit.</p>
+    <p><strong>Financial entries (stay on device):</strong> amount, date, type (income/expense), category, description, tags, payment method, catalogues, display currency (no per-transaction FX) and UI language. No financial sync to Firestore. Play treats “collected” as data sent off-device.</p>
+    <p><strong>Local backup:</strong> optional JSON in the app documents folder. New backups exclude tokens and sessions. We do not upload that file.</p>
+    <p>We do not ask for contacts, location, SMS, camera, microphone, installed-app lists, phone number, bank credentials, card numbers or government IDs. Custom categories and tags may be shared across accounts on the same device.</p>
+    <p>Purposes: sign-in, storing and showing your entries, local backup/restore, language and display currency, privacy/deletion requests. No ads, sale of data, or marketing profiling. A placeholder subscription screen in development builds does not mean those products are active.</p>
+    <p>The Android build may bundle the Cloud Firestore SDK; the app does not store your ledger there. Firebase may still receive technical service metadata.</p>
+    <p>Local SQLite until you wipe data in Settings or uninstall. Backup JSON files are not removed by the in-app wipe. Firebase Auth remains until the account is deleted; Firebase may keep backups for about 180 days.</p>
+    <p>Private app storage; HTTPS for authentication; no extra SQLite encryption.</p>
+    <p id="delete-account"><strong>Deletion:</strong> in-app Settings wipe local tables but not the Firebase account or backup JSON. To delete the Firebase user, email <a href="mailto:giosave98@gmail.com">giosave98@gmail.com</a> from the Google address you use in the app, subject <code>Delete Money Tracking account</code>. Also wipe local data and optionally revoke access at <a href="https://myaccount.google.com/permissions">Google Account permissions</a>. We do not freeze accounts instead of deleting them.</p>
+    <p>Not directed at children under 13. Contact: Giovanni Sanchez, <a href="mailto:giosave98@gmail.com">giosave98@gmail.com</a>.</p>
+  </main>
+  <footer>
+    <p>Money Tracking · <a href="https://giosavedev.github.io/">giosavedev.github.io</a></p>
+  </footer>
+</body>
+</html>
