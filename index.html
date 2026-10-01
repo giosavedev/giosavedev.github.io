@@ -1,45 +1,224 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Giovanni Sanchez — Software Engineer, mobile and web. Freelancer.">
 	<title>Giovanni Sanchez</title>
+	<style>
+		:root {
+			--bg: #485564;
+			--ink: #fafafa;
+			--muted: #d5dbe2;
+			--line: rgba(250, 250, 250, 0.28);
+		}
 
-	<link href="https://fonts.googleapis.com/css?family=Reem+Kufi|Roboto:300" rel="stylesheet">
-	<link href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="css/grey-white.css">
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+		}
 
+		html {
+			-webkit-text-size-adjust: 100%;
+			background: var(--bg);
+			color-scheme: dark;
+		}
+
+		body {
+			margin: 0;
+			min-height: 100dvh;
+			background: var(--bg);
+			color: var(--ink);
+			font-family: "Segoe UI", system-ui, sans-serif;
+		}
+
+		main {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			min-height: 100dvh;
+			max-width: 40rem;
+			margin: 0 auto;
+			padding: 2rem 1.25rem 2.75rem;
+		}
+
+		.hello {
+			margin: 0 0 0.85rem;
+			color: var(--muted);
+			font-size: 0.75rem;
+			letter-spacing: 0.16em;
+			text-transform: uppercase;
+		}
+
+		h1 {
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+			font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+			font-size: clamp(3.1rem, 13vw, 5.4rem);
+			font-weight: 400;
+			line-height: 0.9;
+			letter-spacing: -0.04em;
+		}
+
+		.tagline {
+			display: flex;
+			flex-direction: column;
+			gap: 0.15rem;
+			margin: 1.35rem 0 0;
+			color: var(--muted);
+			font-size: 1.05rem;
+			line-height: 1.4;
+		}
+
+		nav {
+			position: relative;
+			margin-top: 2.75rem;
+			padding-top: 1.15rem;
+		}
+
+		nav::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background: var(--line);
+			transform-origin: left center;
+		}
+
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.55rem 1.35rem;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		a {
+			color: inherit;
+			font-size: 0.95rem;
+			text-decoration-line: underline;
+			text-decoration-thickness: 1px;
+			text-decoration-color: transparent;
+			text-underline-offset: 0.28em;
+			transition: text-decoration-color 0.25s ease;
+		}
+
+		a:hover,
+		a:focus-visible {
+			text-decoration-color: currentColor;
+		}
+
+		a:focus-visible {
+			outline: 2px solid var(--ink);
+			outline-offset: 4px;
+		}
+
+		@keyframes rise {
+			from {
+				opacity: 0;
+				transform: translateY(0.7rem);
+			}
+
+			to {
+				opacity: 1;
+				transform: none;
+			}
+		}
+
+		@keyframes draw {
+			from {
+				transform: scaleX(0);
+			}
+
+			to {
+				transform: scaleX(1);
+			}
+		}
+
+		.hello,
+		h1 span,
+		.tagline span,
+		nav li {
+			animation: rise 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+		}
+
+		.hello { animation-delay: 0.05s; }
+		h1 span:nth-child(1) { animation-delay: 0.14s; }
+		h1 span:nth-child(2) { animation-delay: 0.24s; }
+		.tagline span:nth-child(1) { animation-delay: 0.38s; }
+		.tagline span:nth-child(2) { animation-delay: 0.48s; }
+		nav li:nth-child(1) { animation-delay: 0.58s; }
+		nav li:nth-child(2) { animation-delay: 0.66s; }
+		nav li:nth-child(3) { animation-delay: 0.74s; }
+		nav li:nth-child(4) { animation-delay: 0.82s; }
+		nav li:nth-child(5) { animation-delay: 0.9s; }
+
+		nav::before {
+			animation: draw 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.hello,
+			h1 span,
+			.tagline span,
+			nav li,
+			nav::before {
+				animation: none;
+			}
+
+			a {
+				transition: none;
+			}
+		}
+
+		@media (max-width: 380px) {
+			ul {
+				flex-direction: column;
+				gap: 0.85rem;
+			}
+		}
+
+		@media (min-width: 720px) {
+			main {
+				justify-content: center;
+				padding: 4.5rem 2rem;
+			}
+
+			.tagline {
+				font-size: 1.125rem;
+			}
+
+			nav {
+				margin-top: 3.25rem;
+			}
+		}
+	</style>
 </head>
 <body>
 	<main>
-		<div class="intro">Hello, I'm Giovanni</div>
-		<div class="tagline">Software Engineer (Mobile and Web) | Freelancer</div>
-		<div class="icons-social">
-			<a target="_blank" href="https://github.com/giosavedev">
-        <i class="fab fa-github" aria-hidden="true" title="Github"></i>
-        <span class="sr-only">Github</span>
-      </a>
-      <a target="_blank" href="https://www.linkedin.com/in/giosavedev">
-        <i class="fab fa-linkedin" aria-hidden="true" title="LinkedIn"></i>
-        <span class="sr-only">LinkedIn</span>
-      </a>
-      <a target="_blank" href="https://es.stackoverflow.com/users/103444/giosave">
-        <i class="fab fa-stack-overflow" aria-hidden="true" title="StackOverflow"></i>
-        <span class="sr-only">StackOverflow</span>
-      </a>
-      <a href="https://leetcode.com/giosave" target="_blank">
-        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IndoaXRlIiBkPSJNMTMuNDgzIDBhMS4zNyAxLjM3IDAgMCAwLS45NjEuNDM4TDcuMTE2IDYuMjI2bC0zLjg1NCA0LjEyNmE1LjMgNS4zIDAgMCAwLTEuMjA5IDIuMTA0YTUgNSAwIDAgMC0uMTI1LjUxM2E1LjUgNS41IDAgMCAwIC4wNjIgMi4zNjJhNiA2IDAgMCAwIC4zNDkgMS4wMTdhNS45IDUuOSAwIDAgMCAxLjI3MSAxLjgxOGw0LjI3NyA0LjE5M2wuMDM5LjAzOGMyLjI0OCAyLjE2NSA1Ljg1MiAyLjEzMyA4LjA2My0uMDc0bDIuMzk2LTIuMzkyYy41NC0uNTQuNTQtMS40MTQuMDAzLTEuOTU1YTEuMzggMS4zOCAwIDAgMC0xLjk1MS0uMDAzbC0yLjM5NiAyLjM5MmEzLjAyIDMuMDIgMCAwIDEtNC4yMDUuMDM4bC0uMDItLjAxOWwtNC4yNzYtNC4xOTNjLS42NTItLjY0LS45NzItMS40NjktLjk0OC0yLjI2M2EyLjcgMi43IDAgMCAxIC4wNjYtLjUyM2EyLjU1IDIuNTUgMCAwIDEgLjYxOS0xLjE2NEw5LjEzIDguMTE0YzEuMDU4LTEuMTM0IDMuMjA0LTEuMjcgNC40My0uMjc4bDMuNTAxIDIuODMxYy41OTMuNDggMS40NjEuMzg3IDEuOTQtLjIwN2ExLjM4NCAxLjM4NCAwIDAgMC0uMjA3LTEuOTQzbC0zLjUtMi44MzFjLS44LS42NDctMS43NjYtMS4wNDUtMi43NzQtMS4yMDJsMi4wMTUtMi4xNThBMS4zODQgMS4zODQgMCAwIDAgMTMuNDgzIDBtLTIuODY2IDEyLjgxNWExLjM4IDEuMzggMCAwIDAtMS4zOCAxLjM4MmExLjM4IDEuMzggMCAwIDAgMS4zOCAxLjM4MkgyMC43OWExLjM4IDEuMzggMCAwIDAgMS4zOC0xLjM4MmExLjM4IDEuMzggMCAwIDAtMS4zOC0xLjM4MnoiLz48L3N2Zz4=" alt="LeetCode Icon" style="width: 32px; height: 32px;">
-        </img>
-      </a>
-      <a target="_blank" href="https://dev.to/giosave">
-        <i class="fab fa-dev" aria-hidden="true" title="DEV Community"></i>
-        <span class="sr-only">DEV Community</span>
-      </a>
-    </div>
+		<p class="hello">Hello, I'm</p>
+		<h1>
+			<span>Giovanni</span>
+			<span>Sanchez</span>
+		</h1>
+		<p class="tagline">
+			<span>Software Engineer (Mobile and Web)</span>
+			<span>Freelancer</span>
+		</p>
+		<nav aria-label="Profiles">
+			<ul>
+				<li><a href="https://github.com/giosavedev">GitHub</a></li>
+				<li><a href="https://www.linkedin.com/in/giosavedev">LinkedIn</a></li>
+				<li><a href="https://es.stackoverflow.com/users/103444/giosave">Stack Overflow</a></li>
+				<li><a href="https://leetcode.com/giosave">LeetCode</a></li>
+				<li><a href="https://dev.to/giosave">DEV</a></li>
+			</ul>
+		</nav>
 	</main>
 </body>
 </html>
